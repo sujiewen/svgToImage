@@ -121,7 +121,7 @@ const  opts = buildOptions( {
 const args = require('minimist')(process.argv.slice(2), opts)
 
 try {
-    let localPath = args['path'] ? args['path']: (process.cwd() + '/test.png')
+    let localPath = args['path'] ? args['path']: (process.cwd() + '/dist/test.png')
     autoBarCodeToFile(args['content'] + '', localPath).then(res => {
         console.log('path=' + localPath)
         rl.close()
