@@ -1,0 +1,25 @@
+{
+  "name": "svgToImage",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "node main.js"
+  },
+  "main": "main.js",
+  "bin": "./main.js",
+  "pkg": {
+    "scripts": "./main.js",
+    "assets": "node_modules/sharp/build/Release/*",
+    "outputPath": "./dist"
+  },
+  "dependencies": {
+    "jsbarcode": "^3.11.4",
+    "minimist": "^1.2.5",
+    "minimist-options": "^4.1.0",
+    "sharp": "^0.28.1",
+    "xmldom": "^0.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.6.0"
+  }
+}
