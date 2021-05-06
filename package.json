@@ -1,25 +1,33 @@
 {
   "name": "svgToImage",
   "version": "0.0.1",
+  "description": "A utility svg to image from Node.js and Electron",
+  "license": "MIT",
+  "author": "9033466@qq.com",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
-    "build": "node main.js"
+    "start": "node src/index.js",
+    "build": "webpack --config webpack.production.config.js"
   },
-  "main": "main.js",
-  "bin": "./main.js",
-  "pkg": {
-    "scripts": "./main.js",
-    "assets": "node_modules/sharp/build/Release/*",
-    "outputPath": "./dist"
-  },
-  "dependencies": {
-    "jsbarcode": "^3.11.4",
-    "minimist": "^1.2.5",
-    "minimist-options": "^4.1.0",
-    "sharp": "^0.28.1",
-    "xmldom": "^0.6.0"
-  },
+  "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^6.4.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^4.6.0"
-  }
+  },
+  "keywords": [
+    "svgToImage",
+    "node.js",
+    "electron",
+    "windows",
+    "macos"
+  ]
 }
